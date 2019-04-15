@@ -54,6 +54,8 @@ end
 
 def turn
 
+  current_player
+  
   user_input = gets.strip #prompts input(cell desired) and stores that as a value 
 
   array_index = input_to_index(user_input) 
