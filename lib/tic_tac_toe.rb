@@ -64,7 +64,6 @@ def turn
     elsif !(turn_count % 2 == 0)
     move(array_index, "O")
     end
-    display_board
   else
     turn #asks again via recursion
   end
