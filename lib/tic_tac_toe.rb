@@ -127,7 +127,7 @@ def draw?
 end
 
 def over?
-  if (won? && (full? || !full?)lea) || draw?
+  if (won? && (full? || !full?)) || draw?
     #IF game won AND full board ==> game over
     #IF game won AND NOT full board ==> game over
     #IF game is draw (full,no winner) ==> game over
