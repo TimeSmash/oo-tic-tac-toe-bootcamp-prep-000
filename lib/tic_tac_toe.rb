@@ -131,10 +131,10 @@ def over?
     #IF game won AND full board ==> game over
     #IF game won AND NOT full board ==> game over
     #IF game is draw (full,no winner) ==> game over
-    return true
+    true
   else
-  return false
-end
+    false
+  end
 end
   
 def winner
