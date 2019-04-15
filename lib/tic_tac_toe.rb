@@ -12,7 +12,7 @@ class TicTacToe
 
 #######
 def play
-  until over?
+  until over? || won?
   turn #keep asking for player input until game is over
   end
   if won?
