@@ -154,14 +154,14 @@ def over?
   end
 end
   
-def winner
-  #won? returns array of numbers
-  #Need to take this array of indexes and iterate through it to see if board at those indexes equals X
-  if won? && won?.all? {|ele| @board[ele] == "X"}
-    return "X"
-  elsif won? && won?.all? {|ele| @board[ele] == "O"}
-    return "O"
-  end
-  nil
-end
+# def winner
+#   #won? returns array of numbers
+#   #Need to take this array of indexes and iterate through it to see if board at those indexes equals X
+#   if won? && won?.all? {|ele| @board[ele] == "X"}
+#     return "X"
+#   elsif won? && won?.all? {|ele| @board[ele] == "O"}
+#     return "O"
+#   end
+#   nil
+# end
 end
