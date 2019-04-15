@@ -3,9 +3,9 @@ class TicTacToe
     @board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
   end
   
-  # _1_|_2_|_3_ 1 = [0] 2 = [1]
-  # _4_|_5_|_6_
-  # _7 | 8 | 9
+  # _0_|_1_|_2_ 1 = [0] 2 = [1]
+  # _3_|_4_|_5_
+  # _6 | 7 | 8
   
   
   WIN_COMBINATIONS = [[0,1,2], [0,3,6], [0,4,8], [1,4,7], [2,5,8], [3,4,5], [6,7,8], [6,4,2]]
@@ -53,7 +53,6 @@ def move(position, player_token)
 end
 
 def turn
-  display_board
 
   user_input = gets.strip #prompts input(cell desired) and stores that as a value 
 
@@ -62,11 +61,10 @@ def turn
   if valid_move?(array_index)
     if turn_count % 2 == 0
     move(array_index, "X")
-    display_board
     elsif !(turn_count % 2 == 0)
     move(array_index, "O")
-    display_board
     end
+    display_board
   else
     turn #asks again via recursion
   end
@@ -133,7 +131,7 @@ def over?
     #IF game won AND NOT full board ==> game over
     #IF game is draw (full,no winner) ==> game over
     true
-  elsif (!full?)
+  elsif !full?
     false
   end
 end
