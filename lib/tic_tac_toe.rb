@@ -134,16 +134,16 @@ def draw?
   if !won? && ( full? || !full? )
 >>>>>>> 6d0daffcf931bc8729d88a17485c3cee48ff38d5
     true
-  elsif !won?(@board)
+  elsif !won?
     false
   end
 end
 
 def over?
 <<<<<<< HEAD
-  if (won?(@board) && full?(@board)) || (won?(@board) && !full?(@board)) || draw?(@board)
+  if (won? && full) || (won?&& !full?) || draw?
 =======
-  if ( won?(@board) && ( (full?(@board) || !full?(@board) ) ) ) || draw?(@board)
+  if ( won? && (full? || !full? )  ) || draw?
 >>>>>>> 6d0daffcf931bc8729d88a17485c3cee48ff38d5
     #IF game won AND full board ==> game over
     #IF game won AND NOT full board ==> game over
@@ -157,9 +157,9 @@ end
 def winner
   #won? returns array of numbers
   #Need to take this array of indexes and iterate through it to see if board at those indexes equals X
-  if won?(@board) && won?(@board).all? {|ele| @board[ele] == "X"}
+  if won? && won?.all? {|ele| @board[ele] == "X"}
     return "X"
-  elsif won?(@board) && won?(@board).all? {|ele| @board[ele] == "O"}
+  elsif won? && won?.all? {|ele| @board[ele] == "O"}
     return "O"
   end
   nil
