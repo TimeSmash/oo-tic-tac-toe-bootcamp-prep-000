@@ -16,7 +16,7 @@ def play
   turn #keep asking for player input until game is over
   end
   if won?
-    puts "Congratulations #{winner(@board)}!"
+    puts "Congratulations #{winner}!"
   elsif draw?
     puts "Cat's Game!"
   end
