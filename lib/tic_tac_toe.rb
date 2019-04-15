@@ -58,7 +58,6 @@ def turn
   user_input = gets.strip #prompts input(cell desired) and stores that as a value 
 
   array_index = input_to_index(user_input) 
-<<<<<<< HEAD
 
   if valid_move?(array_index)
     if turn_count % 2 == 0
@@ -107,7 +106,7 @@ def won?
       return combo
     end
   end
-  false
+    false
 end
 
 def full?
@@ -121,8 +120,6 @@ def full?
 end
 
 def draw?
-  if !won? && full?
-    true
   if !won? && ( full? || !full? )
     true
   elsif !won?
