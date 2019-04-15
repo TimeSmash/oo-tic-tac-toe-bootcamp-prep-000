@@ -133,7 +133,7 @@ def over?
     #IF game is draw (full,no winner) ==> game over
     return true
   end
-  false
+  return false
 end
   
 def winner
