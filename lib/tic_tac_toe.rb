@@ -133,7 +133,7 @@ def over?
     #IF game won AND NOT full board ==> game over
     #IF game is draw (full,no winner) ==> game over
     true
-  else
+  elsif (!full?)
     false
   end
 end
