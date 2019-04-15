@@ -68,13 +68,6 @@ def turn
     move(array_index, "O")
     display_board
     end
-=======
-  #converts cell to array index
-
-  if valid_move?(array_index)
-    move(array_index, "X")
-    display_board
->>>>>>> 6d0daffcf931bc8729d88a17485c3cee48ff38d5
   else
     turn #asks again via recursion
   end
@@ -128,11 +121,9 @@ def full?
 end
 
 def draw?
-<<<<<<< HEAD
   if !won? && full?
-=======
+    true
   if !won? && ( full? || !full? )
->>>>>>> 6d0daffcf931bc8729d88a17485c3cee48ff38d5
     true
   elsif !won?
     false
@@ -140,11 +131,9 @@ def draw?
 end
 
 def over?
-<<<<<<< HEAD
   if (won? && full) || (won?&& !full?) || draw?
-=======
+  true
   if ( won? && (full? || !full? )  ) || draw?
->>>>>>> 6d0daffcf931bc8729d88a17485c3cee48ff38d5
     #IF game won AND full board ==> game over
     #IF game won AND NOT full board ==> game over
     #IF game is draw (full,no winner) ==> game over
@@ -154,15 +143,14 @@ def over?
   end
 end
   
-# def winner
-#   #won? returns array of numbers
-#   #Need to take this array of indexes and iterate through it to see if board at those indexes equals X
-#   if won? && won?.all? {|ele| @board[ele] == "X"}
-#     return "X"
-#   elsif won? && won?.all? {|ele| @board[ele] == "O"}
-#     return "O"
-#   end
-#   nil
-# end
+def winner
+  #won? returns array of numbers
+  #Need to take this array of indexes and iterate through it to see if board at those indexes equals X
+  if won? && won?.all? {|ele| @board[ele] == "X"}
+    return "X"
+  elsif won? && won?.all? {|ele| @board[ele] == "O"}
+    return "O"
+  end
+  nil
 end
 end
