@@ -76,7 +76,7 @@ def turn
     display_board
 >>>>>>> 6d0daffcf931bc8729d88a17485c3cee48ff38d5
   else
-    turn(@board) #asks again via recursion
+    turn #asks again via recursion
   end
 end
 
@@ -93,9 +93,9 @@ def turn_count
 end
 
 def current_player
-  if (turn_count(@board) % 2 == 0)
+  if (turn_count % 2 == 0)
     return "X"
-  elsif !(turn_count(@board) % 2 == 0)
+  elsif !(turn_count % 2 == 0)
     return "O"
   end
 end
@@ -129,9 +129,9 @@ end
 
 def draw?
 <<<<<<< HEAD
-  if !won?(@board) && full?(@board)
+  if !won? && full?
 =======
-  if !won?(@board) && ( full?(@board) || !full?(@board) )
+  if !won? && ( full? || !full? )
 >>>>>>> 6d0daffcf931bc8729d88a17485c3cee48ff38d5
     true
   elsif !won?(@board)
